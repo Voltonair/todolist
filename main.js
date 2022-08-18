@@ -1,30 +1,38 @@
 let board = document.querySelector('.to-do-board');
 let taskContainer = document.querySelector('.container-task');
 let taskbar = document.querySelector('.add-task');
-let button = document.querySelector('.add-btn');
-let noTasksMsg = document.querySelector('.message');
+let form = document.querySelector('.add-form');
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-button.addEventListener('click', () => {
+    if (taskbar.value !== '') {
 
-    if (taskContainer === null) {
-        noTasksMsg.style.display = 'flex';
-    } else {
-        noTasksMsg.style.display = 'none';
-    }
+        if(taskContainer.querySelector(".message") != null){
+            taskContainer.querySelector(".message").remove()
+        }
 
-    let div = document.createElement('div');
-    div.className = 'item-task';
-    div.innerHTML = taskbar.value;
-    taskContainer.insertAdjacentElement('beforeend', div)
+        let div = document.createElement('div')
+        div.className = 'item-task';
+        div.innerHTML = taskbar.value;
+        taskContainer.insertAdjacentElement('beforeend', div);
 
-    let deleteButton = document.createElement('button')
-    deleteButton.className = 'deleteBtn';
-    deleteButton.textContent = "X";
-    div.appendChild(deleteButton);
+        let deleteBtn = document.createElement('button');
+        deleteBtn.className = 'deleteBtn';
+        deleteBtn.textContent = 'X';
+        div.appendChild(deleteBtn);
+        taskbar.value = '';
 
-    deleteButton.addEventListener('click', () => {
-        div.remove();
-    })
+        deleteBtn.addEventListener('click', () => {
+            div.remove();
 
+            if (taskContainer.children.length === 0) {
+                const message = document.createElement('div');
+                message.className = 'message';
+                message.textContent = 'There are no pending tasks.'
+                taskContainer.appendChild(message);
+            }
+        })
+
+} else {}
 })

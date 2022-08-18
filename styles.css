@@ -12,7 +12,7 @@
 }
 
 .to-do-board {
-    width: 500px;
+    width: 40%;
     background: #88CCF1;
     border-radius: 10px;
 }
@@ -34,6 +34,10 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 1em;
+}
+
+.add-form {
+    display: flex;
 }
 
 .add-task {
@@ -71,6 +75,10 @@ h1 {
     width: 90%;
     border-radius: 10px;
     margin-bottom: 10px;
+    padding-left: .5em;
+    font-size: 15px;
+    color: white;
+    text-shadow: 2px 2px grey;
 }
 
 .deleteBtn {
@@ -79,7 +87,7 @@ h1 {
     width: 3em;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    height: 2.5em;
+    height: 1.7em;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -91,6 +99,7 @@ h1 {
 
 .message {
     text-align: center;
+    padding: 1em;
     color: white;
-    font-weight: bolder;
+    background: #63afb1;
 }
