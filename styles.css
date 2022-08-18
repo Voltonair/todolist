@@ -1,0 +1,96 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.to-do-board {
+    width: 500px;
+    background: #88CCF1;
+    border-radius: 10px;
+}
+
+.title {
+    background: #3587A4;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    padding: .5em 0 .5em 0;
+    font-size: 22px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.add-task {
+    padding: .5em;
+    width: 80%;
+    margin-right: 1em;
+}
+
+.add-btn {
+    padding: 0 1em 0 1em;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background: #2D848A;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #3587A4;
+}
+
+.container-task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.item-task {
+    display: flex;
+    justify-content: space-between;
+    background: #C1DFF0;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.deleteBtn {
+    border: none;
+    background: #d45151;
+    width: 3em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 2.5em;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
+    background: rgb(235, 95, 95);
+}
+
+.message {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
